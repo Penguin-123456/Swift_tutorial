@@ -8,19 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var str = "Hello, SwiftUI"
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text(str)
-            Button("ボタン") {
-                str = "ハローSwiftUI"
-                print("ボタンが押されたよ")
-            }
+            Rectangle()
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .frame(width: 200, height:200)
+            Rectangle()
+                .foregroundColor(.red)
+                .frame(width: 150, height: 150)
+            Rectangle()
+                .foregroundColor(.yellow)
+                .frame(width: 100,height:100)
         }
-        .padding()
+        HStack {
+            Rectangle()
+                .foregroundColor(.blue)
+                .frame(width:150, height:150)
+            Rectangle()
+                .foregroundColor(.red)
+                .frame(width:100,height:100)
+            Rectangle()
+                .foregroundColor(.yellow)
+                .frame(width:50,height:50)
+        }
+        ZStack {
+            Rectangle()
+                .foregroundColor(.blue)
+                .frame(width:200,height:200)
+            Rectangle()
+                .foregroundColor(.red)
+                .frame(width:150,height:150)
+            Rectangle()
+                .foregroundColor(.yellow)
+                .frame(width:100,height:100)
+        }
     }
 }
 
